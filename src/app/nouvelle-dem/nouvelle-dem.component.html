@@ -1,0 +1,14 @@
+<h1 class="text-center">Faire une nouvelle demande</h1>
+<form class="container">
+  <div class="row">
+    <div class="col-6">
+      <input type="text" class="form-control" placeholder="Disponibilité" [(ngModel)]="date" name="date"/>
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control" placeholder="Lieu" [(ngModel)]="lieu" name="lieu"/>
+    </div>
+    <div class="col-2">
+      <button (click)="add_Demande()" class="btn btn-success">Ajouter</button>
+    </div>
+  </div>
+</form>

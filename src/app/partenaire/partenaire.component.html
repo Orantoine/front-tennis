@@ -1,0 +1,27 @@
+<h1 class="container text-center">Liste des demandes</h1>
+<table class="table table-striped container alig">
+  <thead>
+  <tr>
+    <th scope="col">User</th>
+    <th scope="col">Niveau</th>
+    <th scope="col">Contact</th>
+    <th scope="col">Lieu</th>
+    <th scope="col">Disponibilité</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let d of demande">
+    <th scope="row" class="align-middle">{{d.user.firstName}} {{d.user.lastName}}</th>
+    <td class="align-middle">{{d.user.level}}</td>
+    <td class="align-middle">
+      <ul *ngFor="let u of d.user.contact">
+        <li>{{u}}</li>
+      </ul>
+    </td>
+    <td class="align-middle">{{d.place}}</td>
+    <td class="align-middle">{{d.date}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<app-nouvelle-dem></app-nouvelle-dem>
